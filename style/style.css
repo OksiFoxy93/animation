@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translatey(-100%);
+  }
+  50% {
+    transform: translatey(0%);
+  }
+  100% {
+    transform: translatey(100%);
+  }
+}
+.left_side {
+  width: 100px;
+  height: 100vh;
+  background-color: white;
+}
+.left_side .text {
+  transform: rotate(-90deg);
+  transform-origin: left top 0;
+  position: absolute;
+  top: 50%;
+  left: -173px;
+  font: 22px/22px "Montserrat", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #b2b2b2;
+  animation: ticker 6s linear infinite;
+}
+.left_side .text span {
+  font-weight: 700;
+  color: black;
+}
+.left_side .icon {
+  position: absolute;
+  bottom: 4%;
+  left: 28px;
+}
+
+.button, .first_screen .work_button .work, .first_screen header nav ul li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.button:hover, .first_screen .work_button .work:hover, .first_screen header nav ul li:hover {
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@keyframes bouncing {
+  0% {
+    bottom: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    bottom: 50px;
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+  }
+}
+.first_screen {
+  width: 95%;
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.first_screen header {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 70px 0 70px;
+}
+.first_screen header a.logo {
+  font: 30px/30px "Montserrat", sans-serif;
+  font-weight: 900;
+  color: black;
+}
+.first_screen header nav ul {
+  list-style: none;
+}
+.first_screen header nav ul li {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0 15px 2px 15px;
+  margin-right: 30px;
+}
+.first_screen header nav ul li a {
+  color: black;
+}
+.first_screen header nav ul li:hover a {
+  color: white;
+}
+.first_screen .work_button {
+  position: relative;
+  top: 80%;
+}
+.first_screen .work_button .work {
+  margin: auto;
+  text-align: center;
+  max-width: 230px;
+  padding: 12px 0 12px 0;
+  text-transform: uppercase;
+  position: relative;
+  background-color: black;
+  animation: bouncing 0.5s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite alternate both;
+}
+.first_screen .work_button .work a {
+  color: #f0cdab;
+}
+
+/*# sourceMappingURL=style.css.map */
